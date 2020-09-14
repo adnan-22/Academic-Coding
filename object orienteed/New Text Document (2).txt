@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class avg
+{
+private:
+	float a, b, c, d, e;
+public:
+	void get_data(void)
+	{
+		cout << "enter 5 no's" << endl;
+		cin >> a >> b >> c >> d >> e;
+	}
+	void average(void)
+	{
+		float t = (a + b + c + d + e ) / 5;
+		cout <<"avg = "<< t << endl;
+	}
+};
+void main()
+{
+	avg x;
+	x.get_data();
+	x.average();
+}
