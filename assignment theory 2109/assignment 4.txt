@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+float velocity(float, float &);
+void main()
+{
+	float v,t;
+	cout << "Enter the initial velocity of the object : ";
+	cin >> v;
+	cout << "The maximum height reached by the object : " << velocity(v, t) << endl;
+	cout << "The total time the object is in air      : " << t  <<endl;
+	
+}
+float velocity(float v, float & t)
+{
+	 t = (2 * v) / 9.8;
+	 float h = (v*v )/( 2 * 9.8);
+	 return(h);
+}

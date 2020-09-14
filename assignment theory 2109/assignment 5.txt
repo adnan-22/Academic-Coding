@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int c[200][3];
+	int p[3][1];
+	int t[200][1] = { 0 };
+	int count = 0;
+	char o;
+	for (int i = 0; i < 3; i++)
+	{
+		if (i == 0)
+			cout << "Shirt's price : ";
+		else if (i == 1)
+			cout << "Pants's price : ";
+		else if (i == 2)
+			cout << "Shoes's price : ";
+		cin >> p[i][0];
+	}
+	for (int i = 0; i < 200; i++)
+	{
+		cout << endl<<"customer no. 5007." << i + 1<<endl;
+		count=i;
+		for (int j = 0; j < 3; j++)
+		{
+			if (j == 0)
+				cout << "Shirt's quantity : ";
+			else if (j == 1)
+				cout << "Pants's quantity : ";
+			else if (j == 2)
+				cout << "Shoes's quantity : ";
+			cin >> c[i][j];
+		}
+		cout << "Do u want to take anoter entry press y/n: ";
+			cin >> o;
+			if (o == 'n')
+				break;
+	}
+	for (int i = 0; i < count+1; i++)
+	{
+		for (int j = 0; j < 1; j++)
+		{
+			for (int k = 0; k < 3; k++)
+				t[i][j] += c[i][k] * p[k][j];
+		}
+	}
+	float s=0;
+	for (int i = 0; i < count+1; i++)
+	{
+		for (int j = 0; j < 1; j++)
+			s += t[i][j];
+	}
+	cout << "total price of the day:" << s<<endl;
+	int max = t[0][0];
+	for (int i = 0; i < count + 1; i++)
+	{
+		if (t[i][0]>max)
+			max = t[i][0];
+	}
+	for (int i = 0; i < count + 1; i++)
+	{
+		if (max == t[i][0])
+			cout << "customer id 5007." << i + 1 << " bought maximum"<<endl;
+	}
+}

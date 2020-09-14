@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int c = 1, n, d = 0, r, max = 0, min = 9;
+	cout << "enter a no:";
+	cin >> n;
+	for (n; n > 0; n = n / 10)
+	{
+		r = n % 10;
+		d = (d * 10) + r;		
+			if (max < r)
+				max = r;
+			if (min > r)
+				min = r;	
+	}
+	cout << "maximum digit:" << max << endl;
+	cout << "minimum digit:" << min << endl;
+	cout << "Reverse no multiplied by 3 is:" << d << " X " << 3 << " = " << d * 3 << endl;
+}
