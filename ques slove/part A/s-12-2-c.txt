@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+void main()
+{
+	char a[12];
+	cout << "Enter a mobile no : ";
+	cin.get(a, 12);
+	switch (a[2])
+	{
+	case '1':cout << "This number is Citycell"<<endl; break;
+	case '5':cout << "This number is Teletalk" << endl; break;
+	case '6':cout << "This number is Airtel" << endl; break;
+	case '7':cout << "This number is Grameenphone" << endl; break;
+	case '8':cout << "This number is Robi" << endl; break;
+	case '9':cout << "This number is Banglalink" << endl; break;
+	default:cout << "This number is is not Valid in Bangladesh" << endl; break;
+	}
+}

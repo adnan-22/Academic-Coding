@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+bool isrightangle(float, float, float);
+void main()
+{
+	float b, h, hy;
+	cout << "Enter Base       :"; cin >> b;
+	cout << "Enter Height     :"; cin >> h;
+	cout << "Enter Hypotenuse :"; cin >> hy;
+	if (isrightangle(b, h, hy))
+		cout << "The Triangle is a Right Angle Triangle" << endl;
+	else
+		cout << "The Triangle isn't a Right Angle Triangle" << endl;
+}
+bool isrightangle(float b, float h, float hy)
+{
+	float x = b*b;
+	float y = h*h;
+	float z = hy*hy;
+	if ((x + y) == z)
+		return(true);
+	else
+		return(false);
+}
+

@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int m, p, v, b, t;
+	cout << "Total no of Motor cycle used the bridge  : ";
+	cin >> m;
+	cout << "Total no of Private car used the bridge  : ";
+	cin >> p;
+	cout << "Total no of Pick up van used the bridge  : ";
+	cin >> v;
+	cout << "Total no of Bus used the bridge          : ";
+	cin >> b;
+	cout << "Total no of Truck used the bridge        : ";
+	cin >> t;
+	cout << "Total Revenue Earned on the day:" << m * 20 + p * 150 + v * 210 + b * 450 + t * 650<<endl;
+}

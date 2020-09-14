@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+const float pi = 3.1416;
+float cylinder(float, float, float&);
+void main()
+{
+	float r, l,v;
+	cout << "Enter radius of the cylinder : ";
+	cin >> r;
+	cout << "Enter length of the cylinder : ";
+	cin >> l;
+	cout << "Surface area of cylinder of the cylinder : " << cylinder(r, l, v) << endl;
+	cout << "Volume of the cylinder :" << v << endl;
+}
+float cylinder(float r, float l, float& v)
+{
+	float a =(2*pi*r*l)+(2*pi*r*r) ;
+	v = pi*r*r*l;
+	return(a);
+}
+
+Enter radius of the cylinder : 2.5
+Enter length of the cylinder : 3.2
+Surface area of cylinder of the cylinder : 89.5356
+Volume of the cylinder :62.832
+Press any key to continue . . .

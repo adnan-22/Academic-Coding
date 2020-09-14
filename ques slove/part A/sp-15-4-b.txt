@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+int fact(int);
+int comb(int,int);
+bool isprime(int);
+void main()
+{
+	int n, k,p;
+	cout << "Enter the value of n : "; cin >> n;
+	cout << "Enter the value of k : "; cin >> k;
+	p=comb(n, k);
+	if (isprime(p))
+		cout << p << " is a prime no." << endl;
+	else
+		cout << p << " isn't a prime no." << endl;
+}
+int fact(int x)
+{
+	int f = 1;
+	for (x; x >= 1; x--)
+		f *= x;
+	return(f);
+}
+int comb(int n, int k)
+{
+	int x = fact(n);
+	int y = fact(k);
+	int z = fact(n - k);
+	return(x / (y*z));
+}
+bool isprime(int p)
+{
+	if (p < 2)
+		return (false);
+	if (p % 2 == 0)
+		return (false);
+	else if (p < 4)
+		return(true);
+	for (int i = 1; i < p / 2; i++)
+	{
+		if (p%i == 0)
+			return(false);
+		else
+			return(true);
+	}
+}
+

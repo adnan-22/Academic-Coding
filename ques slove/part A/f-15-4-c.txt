@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int h, w;
+	cout << "Enter your height(in cm) : ";
+	cin >> h;
+	cout << "Enter your weight(in Kg) : ";
+	cin >> w;
+	if (w < (h / 2.5))
+		cout << "Underweight" << endl;
+	else if (w >= (h / 2.5) && w <= (h / 2.3))
+		cout << "Normal"<<endl;
+	else if (h / 2.3 < w)
+		cout << "Overheight"<<endl;
+}

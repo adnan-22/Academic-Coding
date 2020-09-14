@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+bool prime(int);
+void main()
+{
+	for (int i = 1; i <= 300; i++)
+	{
+		if (prime(i))
+			cout << i<<" ";
+	}
+}
+bool prime(int x)
+{
+	if (x < 2)
+		return (false);
+	if (x % 2 == 0)
+		return (false);
+	else if (x < 4)
+		return (true);
+	for (int d = 3; d <= x / 2; d += 2)
+	{
+		if (x%d == 0)
+			return(false);
+		else
+			return (true);
+	}
+}

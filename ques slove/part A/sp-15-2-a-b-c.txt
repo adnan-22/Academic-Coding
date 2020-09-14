@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+float price(int);
+void main()
+{
+	int x, c = 0, p;
+	float t=0;
+	while (true)
+	{
+		c++;
+		cin >> x;
+		if (x == 0)
+			break;
+		else
+		{
+			cout << c;
+			t+=price(x);
+		}
+	}
+	float s;
+	cout <<endl<< "Total Bill       = " << t<<endl;
+	cout << "15 % tax         = " << t * 0.15<<endl;
+	cout << "Bill to be paid  = " << t + (t*0.15) << endl;
+	cout << "Cash given       = "; cin >> s;
+	cout << "Excahange        = "<<s-(t+(t*0.15));
+}
+float price(int x)
+{
+	float t=0;
+	int p;
+	switch (x)
+	{
+		case 0:break;
+		case 1: {cout << ".DC motor(12-v)         pc's-"; cin >> p; t += p * 378; break; }
+		case 2: {cout << ".Stepper Motor          pc's-"; cin >> p; t += p * 1200; break; }
+		case 3: {cout << ".Motor Driver (L-298D)  pc's-"; cin >> p; t += p * 120; break;}
+		case 4: {cout << ".ULN-2803               pc's-"; cin >> p; t += p * 359; break; }
+		case 5: {cout << ".Wheels                 pc's-"; cin >> p; t += p * 240; break; }
+		case 6: {cout << ".LDR Sensors            pc's-"; cin >> p; t += p * 25; break; }
+		case 7: {cout << ".Sonar sensors          pc's-"; cin >> p; t += p * 800; break; }
+		case 8: {cout << ".Chasis                 pc's-"; cin >> p; t += p * 3000; break; }
+		case 9: {cout << ".RC remote controller   pc's-"; cin >> p; t += p * 12000; break; }
+		case 10:{cout << ".AVR Microcontrollert   pc's-"; cin >> p; t += p * 340; break; }
+	}
+	return(t);
+}

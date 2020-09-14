@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	float u, t;
+	cout << "Enter the consumed unit : ";
+	cin >> u;
+	if (u <= 100)
+		cout << "total bill:" << u * 15 << endl;
+	if (u > 100 && u <= 300)
+		cout << "total bill:" << (100 * 15) + (u - 100) * 18 << endl;
+	if (u > 300)
+		cout << "total bill:" << (100 * 15) + (200 * 18) + (u - 300) * 25 << endl;
+}

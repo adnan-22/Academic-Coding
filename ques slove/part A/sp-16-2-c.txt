@@ -1,0 +1,24 @@
+#include<iostream>
+int gcd2(int , int );
+int gcd(int , int , int );
+using namespace std;
+void main()
+{
+	int m, n,o;
+	cout << "enter two intigers";
+	cin >> m >> n>>o;
+	cout << "gcd = "<<gcd(m, n, o);
+}
+int gcd(int m, int n, int o)
+{
+	int y = gcd2(m, n);
+	return(gcd2(y, o));
+}
+int gcd2(int a, int b)
+{
+	if (a < b)
+		swap(a, b);
+	if (a%b == 0)
+		return(b);
+	else return(b, a%b);
+}

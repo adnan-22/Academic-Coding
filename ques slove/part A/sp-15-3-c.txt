@@ -1,0 +1,36 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+void main()
+{
+	int c1 = 11, c2 = 4, c3 = 1,k=1;
+	for (int r = 7; r >= 1;r--)
+	{
+		for (int s = 1; s<=(2*k)-1; s++)
+			cout << " ";
+			for (int d = 1; d <= (2 * r) - 1;d++)
+			{
+				if (r % 2 != 0)
+					cout << "*  ";
+				else
+				{
+					if(r==6)
+					{	cout<<" " << c1;
+						c1++;
+					}
+					if (r == 4)
+					{
+						cout << " " << c2<<" ";
+						c2++;
+					}
+					if (r == 2)
+					{
+						cout << " " << c3<<" ";
+						c3++;
+					}				
+				}				
+			}
+			cout << endl;
+			k++;
+	}
+}

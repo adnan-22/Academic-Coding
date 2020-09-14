@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int k = 99;
+	for (int r = 1; r <= 5;r++)
+	{
+		for (int d = 1; d <= r; d++)
+			if(r==5)
+				cout << 50<<" ";
+			else
+			{
+				cout << k<<" ";
+			}
+		k -= 10;
+		cout << endl;
+	}
+}
