@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int no,a,b;
+	cout << "enter a no";
+	cin >> no;
+	a = 2;
+	b = no - 1;
+	while (a <= b)
+	{
+		if (no%a == 0)
+		{   
+			break;
+		}
+		a++;
+	}
+	if (no == a)
+		cout << "prime no";
+	else
+		cout << "not a prime no";
+	
+}
+
+
+adnan

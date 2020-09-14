@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int a, b = 1, sum = 0;
+	cout << "enter the value of n in the given series:";
+	cin >> a;
+	while (b <= a)
+	{	sum = sum + b;
+		b = b + 2;
+	}
+	cout << "sum the series " << sum << endl;
+}
+
+
+adnan
