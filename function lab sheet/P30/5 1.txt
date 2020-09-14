@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+float series(int,int);
+void main()
+{
+	int a,b;
+	cout << "enter value of x & n respectively:"<<endl;
+	cin >> a >> b;
+	cout << "e^x=" << series(a, b) << endl;
+}
+float series(int x, int n)
+{
+	int f = 1, l;
+	float s = 0,t;
+	for (int i = 1; i <= n; i++)
+	{
+		f = f*i;
+		l = pow(x, i);
+		s = s + (l / f);
+	}
+	t = s + 1;
+	return(t);
+}

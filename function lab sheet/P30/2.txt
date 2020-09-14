@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int gcd(int, int);
+void main()
+{
+	int a, b;
+	cout << "enter two no:";
+	cin >> a >> b;
+	cout << "GCD is:" << gcd(a, b) << endl;
+}
+int gcd(int x, int y)
+{
+
+	while (x != y)
+	{
+		if (x > y)
+			x =x - y;
+		else
+			y =y - x;
+	}
+	return(x);
+}
