@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+float min(float [], int );
+void main()
+{
+	float m[10];
+	int n;
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "Enter value no. " << i + 1 << ": ";
+		cin >> m[i];
+	}
+	cout <<endl<< "Enter how many value you want:";
+	cin >> n;
+	cout <<endl<< "min is:" << min(m, n - 1)<<endl;
+}
+float min(float s[], int k)
+{
+	float mn = s[0];
+	for (int j = 1; j <= k; j++)
+	{
+		if (s[j] < mn)
+			mn = s[j];
+	}
+	return(mn);
+}

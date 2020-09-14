@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	float m[100], s1=0,s = 0,a,k;
+	cout << "enter how many values you will input:";
+	cin >> k;
+	for (int i = 0; i < 100; i++)
+	{
+		cout << endl << "Enter value no. " << i + 1 << ": ";
+		cin >> m[i];
+		s = s + m[i];
+		if (m[i] == 0)
+			break;
+	}
+	cout << endl << "avg is:"<<s/(i-1)<<endl;
+}
+
+ 
+
+
