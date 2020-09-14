@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cstring>
+int max(int, int, int, int, int);
+using namespace std;
+void main()
+{
+	char s[1000];
+	int c=1;
+	cout << "Enter a text :";
+	cin.get(s, 1000);
+	int l = strlen(s);
+	s[0] = toupper(s[0]);
+	for (int i = 0; i < l; i++)
+	{
+		if (s[i] == ',' || s[i] == ';')
+			c++;
+	}
+	cout << "There are " << c << " clauses in the given sentence." << endl;
+	for (int i = 0; i < l; i++)
+	{
+		if (s[i] == ' ' || s[i] == '.' || s[i] == '\n')
+			s[i + 1] =toupper(s[i + 1]);
+		cout << s[i];
+	}
+	cout << endl;
+}
