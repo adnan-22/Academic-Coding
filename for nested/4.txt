@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int s, r, c;
+	for (r = 1; r <= 5; r++)
+	{
+		for (s = 1; s <= 5 - r; s++)
+			cout << " ";
+		for (c = 1; c <= r; c++)
+			cout << c;
+		cout << endl;
+	}
+}
+
+
+    1
+   12
+  123
+ 1234
+12345
+Press any key to continue . . .

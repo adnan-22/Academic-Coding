@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int fact(int);
+void main()
+{
+	int x;
+	cout << "enter a intiger:"; cin >> x;
+		cout << "factorial of " << x << " is " << fact(x) << endl;
+}
+int fact(int a)
+{
+	int f = 1;
+	for (int i = a; i>0; i--)
+		f =f*i;
+	return(f);
+}

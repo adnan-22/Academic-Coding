@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void leap_year(int);
+void main()
+{	
+	int x;
+	cout << "enter a year:"<<endl;
+	cin >> x;
+	leap_year(x);
+}
+void leap_year(int a)
+{
+	int n;
+	n = a % 100;
+	if (n % 4 == 0)
+		cout << "it is a leap year"<<endl;
+	else
+		cout << "it is not leap year"<<endl;
+}

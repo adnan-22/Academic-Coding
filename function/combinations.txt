@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int combinations(int, int);
+void main()
+{
+	int x, y;
+	cout << "enter the value of n:"; cin >> x;
+	cout << "enter the value of k:"; cin >> y;
+	cout << "The combinations is " << combinations(x, y) << endl;
+}
+int fact(int a)
+{
+	int f = 1;
+	for (int i = a; i>0; i--)
+		f = f*i;
+	return(f);
+}
+int combinations(int n, int k)
+{
+	int a, b,c;
+	a = fact(n);
+	b = fact(n - k);
+	c = fact(k);
+	return(a / (b*c));
+}

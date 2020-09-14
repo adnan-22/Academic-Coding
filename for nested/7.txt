@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int k=0,r,s,d,in,f;
+    cout<<"enter row no:";
+    cin>>in;
+    f=in+2;
+    for(r=1;r<=in;r++)
+    {
+        for(s=1;s<=r-1;s++)
+        cout<<" ";
+        for(d=1;d<=f-k;d++)
+        {
+        cout<<"*";
+        }
+
+        k+=2;
+        cout<<endl;
+    }
+}
+
+
+enter row no:7
+*********
+ *******
+  *****
+   ***
+    *

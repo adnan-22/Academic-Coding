@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+void check_squared(int);
+void main()
+{
+	int x;
+	cout << "enter a intiger:"; cin >> x;
+	check_squared(x);
+}
+void check_squared(int x)
+{
+	int s;
+	s = sqrt(x);
+	if (s*s == x)
+		cout << "squared" << endl;
+	else
+		cout << "not squared" << endl;
+}

@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+double qube(int);
+void main()
+{	
+	int x;
+	cout << "enter a intiger it will show the qube";
+	cin >> x;
+	cout << x<<"^3=" << qube(x)<<endl;
+}
+double qube(int y)
+{
+	int q = y;
+	for (int i = 1; i < 3; i++)
+		q *= y;
+	return(q);
+}
