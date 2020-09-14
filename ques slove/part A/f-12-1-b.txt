@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void bsort(float []);
+void main()
+{
+
+	float q[4];
+	for (int i = 0; i < 4; i++)
+	{
+		cout << "Enter quiz-" << i + 1 << " marks : "; 
+			cin >> q[i];
+	}
+	bsort(q);
+}
+void bsort(float q[4])
+{
+	float k=0;
+	for (int j = 0; j < 4-1; j++)
+	{
+		for (int i = 0; i < 4 - j;i++)
+		{
+			if (q[i] < q[i + 1])
+			{
+				k = q[i];
+				q[i] = q[i + 1];
+				q[i + 1] = k;
+			}
+		}
+	}
+	k = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		k += q[i];
+	}
+	cout << "Avg of best 3 quiz = " << k/3 << endl;
+}

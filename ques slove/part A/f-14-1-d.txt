@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int l, u;
+	cout << "Enter lower range:";
+	cin >> l;
+	cout << "Enter upper range:";
+	cin >> u;
+	int n = l;
+	while (n <= u)
+	{
+		if (n % 2 !=0)
+			cout << n << " ";
+		n++;
+	}	
+}
