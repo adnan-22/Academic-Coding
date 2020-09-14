@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int a[100][100], b[10][10], c[10][10] = {0};
+	for (int i = 0; i < 3; i++)
+	{
+		cout << endl << endl << "customer no : " << i + 1 << endl;
+		for (int j = 0; j < 3; j++)
+		{
+			if (j == 0)
+			{
+				cout << "pencil no:"; cin >> a[i][j];
+			}
+			else if (j == 1)
+			{
+				cout << "rubber no:"; cin >> a[i][j];
+			}
+			else
+			{
+				cout << "pen no:"; cin >> a[i][j];
+			}
+		}
+
+	}
+	//price matrix
+	cout << endl;
+	for (int j = 0; j < 3; j++)
+	{
+		if (j == 0)
+		{
+			cout << "pencil's price:"; cin >> b[j][0];
+		}
+		else if (j == 1)
+		{
+			cout << "rubber's price:"; cin >> b[j][0];
+		}
+		else
+		{
+			cout << "pen's price:"; cin >> b[j][0];
+		}
+	}
+	for (int i=0; i < 3;i++)
+	{
+		for (int j=0; j < 1; j++)
+			for (int k=0; k < 3; k++)
+				c[i][j] += a[i][k] * b[k][j];
+	}
+	int f;
+	cout << "enter invoce no by pressing enter after a digit(for cus-1:0,cus 2:1,cus 3:2:" << endl;
+	cin >> f;
+		cout << "total bill of customer " << f + 1 << " is : " << c[f][0]<<endl;
+}

@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int swp(int[10][10], int);
+void main()
+{
+	int s[10][10];
+	for (int i = 0; i < 2; i++)
+	{
+		cout << endl << "id:" << i + 1 << "-" << endl;
+		for (int j = 0; j < 4; j++)
+		{
+			cout << "quiz " << j + 1 << " :";
+			cin >> s[i][j];
+		}
+		cout << "avg of best 3=" << swp(s, i) << endl;
+	}
+}
+int swp(int a[10][10], int l)
+{
+	int t, s = 0;
+	for (int i = 0; i < 4; i++)
+		for (int j = 0; j < 4; j++)
+		{
+			if (a[l][j]<a[l][j + 1])
+			{
+				t = a[l][j];
+				a[l][j] = a[l][j + 1];
+				a[l][j + 1] = t;
+			}
+		}
+	cout << "best 3 quiz marks are ";
+	for (int f = 0; f < 3; f++)
+	{
+		cout << a[l][f] << ",";
+		s = s + a[l][f];
+	}
+	return(s / 3);
+}

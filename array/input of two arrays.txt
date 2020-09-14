@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void main()
+{
+	int a[50];
+	int b[50];
+	int c, d;
+	cout << "enter how many data u will enter in the array 'a':"; cin >> c;
+	cout << "enter how many data u will enter in the array 'd':"; cin >> d;
+	for (int i = 0; i < c; i++)
+	{
+		cout << "a[" << i + 1 << "]="; cin >> a[i];
+	}
+	for (int j = 0; j < d; j++)
+	{
+		cout << "b[" << j + 1 << "]="; cin >> b[j];
+	}
+}

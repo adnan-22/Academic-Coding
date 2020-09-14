@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+void sum_mat(int[10][10],int,int,int[10][10],int,int);
+void main()
+{
+	int a[10][10],b[10][10],r1,r2,c1,c2;
+	cout << "Enter the Row no of Matrix A : ";cin >> r1;
+	cout << "Enter the Column no of Matrix A : "; cin >> c1;
+	cout << "Enter the Row no of Matrix B : "; cin >> r2;
+	cout << "Enter the Column of Matrix B : "; cin >> c2;
+	for (int i = 0; i < r1; i++)
+	{
+		for (int j = 0; j < c1; j++)
+		{
+			cout << "A [" << i << "] [" << j << "]=";
+			cin >> a[i][j];
+		}
+	}
+	for (int i = 0; i < r2; i++)
+	{
+		for (int j = 0; j < c2; j++)
+		{
+			cout << "B [" << i << "] [" << j << "]=";
+			cin >> b[i][j];
+		}
+	}
+	cout << endl << endl << "matrix A=" << endl;
+	for (int i = 0; i < r1; i++)
+	{
+		for (int j = 0; j < c1; j++)		
+			cout << "     "<< a[i][j];
+		cout << endl;
+	}
+	cout << endl << endl << "matrix B="<<endl;
+	for (int i = 0; i < r2; i++)
+	{
+		for (int j = 0; j < c2; j++)
+			cout <<"     "<< b[i][j];
+		cout << endl;
+	}
+	sum_mat(a,r1,c1,b,r2,c2);
+}
+void sum_mat(int A[10][10], int R1, int C1, int B[10][10], int R2, int C2)
+{	
+	int s[10][10];
+	for (int i = 0; i < R1; i++)
+	{
+		for (int j = 0; j < C1; j++)
+			s[i][j] = A[i][j] + B[i][j];
+	}
+	cout <<endl<< "A+B=" << endl;
+	for (int i = 0; i < R1; i++)
+	{
+		for (int j = 0; j < C1; j++)
+			cout << "     " << s[i][j];
+		cout << endl;
+	}
+}

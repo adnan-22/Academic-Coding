@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void number_of_matches(int[], int, int[], int);
+void main()
+{
+	int a[50];
+	int b[50];
+	int c, d;
+	cout << "enter how many data u will enter in the array 'a':"; cin >> c;
+	cout << "enter how many data u will enter in the array 'd':"; cin >> d;
+	for (int i = 0; i < c; i++)
+	{
+		cout << "a[" << i + 1 << "]="; cin >> a[i];
+	}
+	for (int j = 0; j < d; j++)
+	{
+		cout << "b[" << j + 1 << "]="; cin >> b[j];
+	}
+	number_of_matches(a, c, b, d);
+}
+void number_of_matches(int x[], int t, int y[], int s)
+{
+	int l,c=0;
+	l = (t < s ? t:s);
+	for (int i = 0; i < l; i++)
+	{
+		if (x[i] == y[i])
+			c++;
+		else
+			break;
+	}
+	if (c != 0)
+		cout << "Two arrays has " << c << " initial same numbers"<<endl;
+	else
+		cout << "no initial matchings"<<endl;
+}
