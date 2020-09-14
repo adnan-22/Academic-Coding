@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int c=0;
+class EEE
+{
+
+public:
+	EEE()
+	{
+		c++;
+		cout << "obj crteated" << c << endl;
+	}
+	~EEE()
+	{	
+		cout << "obj destroyed" << c << endl;
+		c--;
+	}
+};
+void main()
+{
+	EEE a, b, c, d;
+	{
+		EEE e, f, g;
+	}
+}
+
+output:
+
+obj crteated1
+obj crteated2
+obj crteated3
+obj crteated4
+obj crteated5
+obj crteated6
+obj crteated7
+obj destroyed7
+obj destroyed6
+obj destroyed5
+obj destroyed4
+obj destroyed3
+obj destroyed2
+obj destroyed1
+Press any key to continue . . .

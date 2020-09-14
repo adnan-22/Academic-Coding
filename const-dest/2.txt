@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+int c=0;
+class EEE
+{
+
+public:
+	EEE()
+	{
+		c++;
+		cout << "obj crteated " << c << endl;
+	}
+	~EEE()
+	{	
+		cout << "obj destroyed " << c << endl;
+		c--;
+	}
+};
+void main()
+{
+	cout << "\n\nenter main\n";
+	EEE a, b, c, d;
+	cout << "\n\nenter block-1\n";
+	EEE e;
+	cout << "\n\nenter block 2\n";
+	EEE f;
+	cout << "\n\nrenter block\n";
+}
+
+
+output:
+
+enter main
+obj crteated 1
+obj crteated 2
+obj crteated 3
+obj crteated 4
+
+
+enter block-1
+obj crteated 5
+
+
+enter block 2
+obj crteated 6
+
+
+renter block
+obj destroyed 6
+obj destroyed 5
+obj destroyed 4
+obj destroyed 3
+obj destroyed 2
+obj destroyed 1
+Press any key to continue . . .
