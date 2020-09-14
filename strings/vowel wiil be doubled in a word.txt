@@ -1,0 +1,46 @@
+#include<iostream>
+#include<cstring>
+int max(int, int, int, int, int);
+using namespace std;
+void main()
+{
+	char s[1000];
+	int a = 0, e = 0, i = 0, o = 0, u = 0;
+	cout << "Enter a text :";
+	cin.get(s, 1000);
+	int l = strlen(s);
+	for (int i = 0; i < l; i++)
+	{
+		switch (s[i])
+		{
+		case 'a':a++; break;
+		case 'e':e++; break;
+		case 'i':i++; break;
+		case 'o':o++; break;
+		case 'u':u++; break;
+		}
+	}
+	cout << "There are ";
+	if (a > 0 || e > 0 || i > o || o > 0 || u > 0)
+	{
+		if (a > 0)
+			cout << a << " 'a' ";
+		if (e > 0)
+			cout << e << " 'e' ";
+		if (i > 0)
+			cout <<i << " 'i' ";
+		if (o > 0)
+			cout << o<< " 'o' ";
+		if (u > 0)
+			cout <<u << " 'u' ";
+	}
+	cout << endl << "The word is ";
+	for (int i = 0; i < l; i++)
+	{
+		if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+			cout << s[i]<<s[i];
+		else
+			cout << s[i];
+	}
+	cout << endl;
+}
