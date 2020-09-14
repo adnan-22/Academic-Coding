@@ -1,0 +1,41 @@
+#include<iostream>
+#include<cstring>
+int max(int, int, int, int, int);
+using namespace std;
+void main()
+{
+	char s[1000], c;
+	int a = 0, e = 0, i = 0, o = 0, u = 0;
+	cin.get(s, 10000);
+	int l = strlen(s);
+	for (int i = 0; i < l; i++)
+	{
+		c = tolower(s[i]);
+		switch (c)
+		{
+		case 'a':a++; break;
+		case 'e':e++; break;
+		case 'i':i++; break;
+		case 'o':o++; break;
+		case 'u':u++; break;
+		}
+	}
+	int x = max(a, e, i, o, u);
+	if (x == a)
+		cout << "a";
+	if (x == e)
+		cout << "e";
+	if (x == i)
+		cout << "i";
+	if (x == o)
+		cout << "o";
+	if (x == u)
+		cout << "u";
+}
+int max(int a, int e, int i, int o,int u)
+{
+	int l = (a > e ? a : e);
+	int m = (i > o ? i : o);
+	int n = (m > u ? m : u);
+	return((l > n ? l : n));
+}
