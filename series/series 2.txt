@@ -1,0 +1,21 @@
+//series type 2+3/2+4/3+.....+n/n-1=?
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   float n,a,s=0,h;
+    cout<<"2+3/2+4/3+.....+n/n-1=?"<<endl;
+    cout<<"enter the value of n:";
+    cin>>n;
+    for(a=2;a<=n;a++)
+    {
+        h=a-1;
+        s=s+(a/h);
+    if(n>a)
+        cout<<a<<"/"<<h<<"+";
+    else
+        cout<<a<<"/"<<h<<"=";
+    }
+    cout<<s<<endl;
+}

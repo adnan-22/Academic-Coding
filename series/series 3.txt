@@ -1,0 +1,18 @@
+1^2-3^2+5^2-.....n
+#include<iostream>
+using namespace std;
+void main()
+{
+	int x, n, sum=0,a=1;
+	cout << "enter the value of n:";
+	cin >> n;
+	for (x = 1; x <= n ; x++)
+	{   
+		if (x % 2 != 0)
+		{
+			sum = sum + (x*x)*a;
+			a *= -1;
+		}
+	}
+	cout << "sum of the series=" << sum << endl;
+}

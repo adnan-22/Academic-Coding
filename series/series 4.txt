@@ -1,0 +1,18 @@
+//series qubed odd no sum & qubed even no substract
+#include<cmath>
+using namespace std;
+void main()
+{
+	int i,n,s=0,k;
+	cout << "enter the value of n:";
+	cin >> n;
+	for (i = 1; i <= n; i++)
+	{
+		k = pow(i, 3);
+		if (i % 2 != 0)
+			s = s + k;
+		else
+			s = s - k;
+	}
+	cout << "sum of the series:" << s << endl;
+}

@@ -1,0 +1,20 @@
+//series type 1/1+1/2+1/3+1/4+......+1/n=?
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   float n,a,s=0;
+    cout<<"1/1+1/2+1/3+1/4+......+1/n=?"<<endl;
+    cout<<"enter the value of n:";
+    cin>>n;
+    for(a=1;n>=a;a++)
+    {
+       s=s+(1/a);
+        if(n>a)
+            cout<<"1/"<<a<<"+";
+        else
+            cout<<"1/"<<a<<"=";
+    }
+    cout<<s<<endl;
+}
