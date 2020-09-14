@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int r,s,d,no,n,v=1;
+    cout<<"enter row no: ";
+    cin>>no;
+    n=no;
+    for(r=1;r<=no;r++)//for row increasing
+    {
+        for(s=1;s<=n;s++)//for spacing at start
+        {cout<<" ";
+        }
+        n--;
+        for(d=1;d<=r;d++)//what kind of display
+        {cout<<v<<" ";
+        v++;
+        }
+        cout<<endl;
+    }
+}

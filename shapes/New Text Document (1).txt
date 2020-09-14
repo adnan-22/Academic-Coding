@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+void main()
+{
+	for (int r = 0; r < 5; r++)
+	{
+		for (int d = 5; d > r ; d--)
+			cout << d;
+		cout << endl;
+	}
+}
+
+54321
+5432
+543
+54
+5
+Press any key to continue . . .

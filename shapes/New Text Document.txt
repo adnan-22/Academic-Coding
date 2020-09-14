@@ -1,0 +1,14 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+void main()
+{
+	for (int r = 1; r <= 5; r++)
+	{
+		for (int s = 1; s <= 5 - r; s++)
+			cout << " ";
+		for (int d = 1; d <= r ; d++)
+			cout << d;
+		cout << endl;
+	}
+}
